@@ -1,0 +1,102 @@
+body {
+  height: 100vh;
+  background: chocolate;
+  font-family: 'Bebas Neue';
+}
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tutorial Video Link: https://www.youtube.com/watch?v=mSfsGTIQlxg */
+.percent {
+  font-size: 5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.progress {
+  stroke: url(#GradientColor);
+  stroke-dasharray: 816.813; /*C=2π×130 || C≈2×3.14159×130 */
+  stroke-dashoffset: 816.813; /* Initially hide the stroke */
+  transform-origin: center;
+  transform: rotate(-90deg);
+
+  animation: progressdash 5s linear forwards;
+}
+
+@keyframes progressdash {
+  from {
+    stroke-dashoffset: 816.813; /* Start with the stroke hidden */
+  }
+  to {
+    stroke-dashoffset: 0; /* Fully reveal the stroke */
+  }
+}
+
+/* Tutorial Blog Link: https://css-tricks.com/almanac/properties/s/stroke-dashoffset/ */
+
+/* Circumference of stroke-dasharray calculte: calc(2 * 3.14159 * 100);  
+ For ellipse: 2 * π * rx || rx value in ellipse */
+/*For Circle C = 2πr ||r value in circle | C=2π×100 || C≈2×3.14159×100 */
+
+.ellipse {
+  stroke-dasharray: 502.654; /*2 * π * rx || rx value in ellipse  */
+  stroke-dashoffset: 502.654; /* Initially hide the stroke */
+  transform-origin: center;
+  transform: rotate(-90deg);
+
+  animation: ellipsedash 5s linear alternate infinite;
+}
+
+@keyframes ellipsedash {
+  from {
+    stroke-dashoffset: 502.654; /* Start with the stroke hidden */
+  }
+  to {
+    stroke-dashoffset: 0; /* Fully reveal the stroke */
+  }
+}
+
+.circle {
+  stroke-dasharray: 628.318; /*C=2π×100 || C≈2×3.14159×100 */
+  stroke-dashoffset: 628.318; /* Initially hide the stroke */
+  transform-origin: center;
+  transform: rotate(-90deg);
+
+  animation: circledash 5s linear alternate infinite; /* forwards | alternate | alternate-reverse*/
+}
+
+@keyframes circledash {
+  from {
+    stroke-dashoffset: 628.318; /* Start with the stroke hidden */
+  }
+  to {
+    stroke-dashoffset: 0; /* Fully reveal the stroke */
+  }
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: pathdash 5s linear alternate infinite;
+}
+
+@keyframes pathdash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
