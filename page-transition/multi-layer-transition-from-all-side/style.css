@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: -1;
+}
+
+.buttons button {
+  border: none;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+#top {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+#left {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+
+#right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+/* Top layer transition effects all color */
+.top-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  background: #745f5f;
+  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+
+.top-layer.active {
+  top: 100%;
+}
+
+.top-layer--2 {
+  background: #393e46;
+  transition-delay: 0.6s;
+}
+
+.top-layer--3 {
+  background: #6c5b7b;
+  transition-delay: 0.4s;
+}
+
+.top-layer--4 {
+  background: #c06c84;
+  transition-delay: 0.2s;
+}
+
+.top-layer--5 {
+  background: #d70a22;
+  transition-delay: 0.1s;
+}
+/* Top layer transition effects all color */
+
+/* Left layer transition effects all color */
+.left-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  bottom: auto;
+  right: auto;
+  background: #745f5f;
+  transition: all 0.9s cubic-bezier(0.3, 0.2, 0.2, 1);
+}
+
+.left-layer.active {
+  left: 100%;
+}
+
+.left-layer--2 {
+  background: #393e46;
+  transition-delay: 0.6s;
+}
+
+.left-layer--3 {
+  background: #6c5b7b;
+  transition-delay: 0.4s;
+}
+
+.left-layer--4 {
+  background: #c06c84;
+  transition-delay: 0.2s;
+}
+
+/* Left layer transition effects all color */

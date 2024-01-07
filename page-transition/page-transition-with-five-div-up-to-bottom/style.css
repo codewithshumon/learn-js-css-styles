@@ -1,0 +1,51 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  text-align: center;
+}
+
+.wrapper button {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 0;
+  background-color: #007ae5;
+  transition: height 0.7s ease;
+}
+
+.loader.loader1 {
+  left: 0;
+  transition-delay: 0s;
+}
+.loader.loader2 {
+  left: 20%;
+  transition-delay: 0.1s;
+}
+.loader.loader3 {
+  left: 40%;
+  transition-delay: 0.2s;
+}
+.loader.loader4 {
+  left: 60%;
+  transition-delay: 0.3s;
+}
+.loader.loader5 {
+  left: 80%;
+  transition-delay: 0.4s;
+}
+
+.loader--active {
+  height: 100%;
+  transition-delay: 0s;
+}
