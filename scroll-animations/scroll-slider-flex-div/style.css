@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.process-wrap {
+  overflow: hidden;
+}
+.process {
+  width: 300%;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-item-align: center;
+  align-self: center;
+  height: 100vh !important;
+}
+
+.process_item {
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.item-one {
+  background: #1ae707;
+}
+.item-two {
+  background: #5705db;
+}
+.item-three {
+  background: #d407e7;
+}
+
+.empty {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
